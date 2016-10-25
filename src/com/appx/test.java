@@ -38,17 +38,29 @@ public class test {
 //			
 //		}
 		
-//		for( int j=9;j>0;j--){
-//			System.out.println(j--);
-//			
-//		}	
-//		1 2 3 4 5 6 7 8 9 10
+		for(int i=5 ; i<105 ; i=i+10){
+			if(i>5 && i <105){
+				System.out.print(",");
+			}
+			
+			System.out.print(i);
+		}
+
+		System.out.println();
+		
 		for(int i=1 ; i<11 ; i++){
 			if(i>1 && i <11){
 				System.out.print(",");
 			}
 			
 			System.out.print(5 + (i-1)*10 );
+		}
+		
+		for(int i=1 ;i<10 ;i++){
+			for(int j=1;j<10;j++){
+				System.out.println(i +"*"+ j + " ");
+			}
+			System.out.println();
 		}
 		
 	}
