@@ -1,29 +1,34 @@
 package com.appx;
 
-public class Test2 {
+import java.util.Scanner;
 
-	static boolean test1(){
-		System.out.println("Test1");
-		return true;
-		
-	}
-	
-	static boolean test2(){
-		System.out.println("Test2");
-		return false;
-	}
+public class Test2 {
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		if(test1() && test2()){
-			System.out.println("Good");
-		}
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Please Enter an Integer Number From 1 to 15");
+		int num = sc.nextInt(); 
 		
-		if(test1() || test2()){
-			System.out.println("BAD");
-			
-		}
-
+		for(int i=1 ; i<=num ;i++){
+			for(int j=num;j>=-(num-1); j--){
+				if(i<j){
+					System.out.print("\t");
+				}
+				else{
+					//j 是負的 表示開始印右邊 0跳過不印 (-1 -2 -3 -4 -5)右邊
+					if(j!=0 && -j<i){
+						if(j<0){
+							System.out.print(-j +1 +"\t");//因為是加一 所以上面條件要小於自己本身
+						}
+						else{
+							System.out.print(j +"\t");
+						}
+					}				
+				}
+			}
+			System.out.println();
+		}		
 	}
 
 }
