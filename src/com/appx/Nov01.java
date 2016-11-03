@@ -4,6 +4,13 @@ import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class Nov01 {
+	
+	static void test(int[] numbers){
+		numbers[5]=99;
+		for(int i=0;i<numbers.length;i++){
+			System.out.print(numbers[i] + ",");
+		}
+	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -36,23 +43,32 @@ public class Nov01 {
 		}
 		System.out.println();
 		
-		boolean dataB[] = new boolean[50];
-		int data2[] = new int[6];
-		for(int i=0;i<data2.length;i++){
-			double random1 = Math.random()*49+1;
-
-			if(!dataB[(int)random1]){
-				data2[i]=(int)random1;
-				dataB[(int)random1]=true;
-			}
-			else{
-				
-				i--;
-			}
+		test(data);
+		
+		System.out.println();
+		
+		for(int i=0;i<data.length;i++){
+			System.out.print(data[i]+" ");
 		}
-		for(int i=0;i<data2.length;i++){
-			System.out.print(data2[i]+" ");
-		}
+		
+		
+//		boolean dataB[] = new boolean[50];
+//		int data2[] = new int[6];
+//		for(int i=0;i<data2.length;i++){
+//			double random1 = Math.random()*49+1;
+//
+//			if(!dataB[(int)random1]){
+//				data2[i]=(int)random1;
+//				dataB[(int)random1]=true;
+//			}
+//			else{
+//				
+//				i--;
+//			}
+//		}
+//		for(int i=0;i<data2.length;i++){
+//			System.out.print(data2[i]+" ");
+//		}
 
 		
 		//***二維陣列宣告 
